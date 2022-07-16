@@ -1,6 +1,12 @@
-word = 'apple'
+# [KDT1] 파이썬 실습 문제 - 문제 12. 문자열 조작하기
+# 주어진 문자열 word가 주어질 때, 해당 단어에서 ‘a’를 모두 제거한 결과를 출력하시오.
 
-for i in word:
-  if i == 'a':
+# input : str
+word = input()
+
+# Algorithm
+for char in word:
+  if char == 'a':
     continue
-  print(i,end='')
+  else:
+    print(char, end='')
