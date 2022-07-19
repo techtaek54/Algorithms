@@ -1,11 +1,12 @@
+# [Codeup 기초 100제] 6094 - 이상한 출석 번호 부르기3
+
 n = int(input())
-check = input().split()
-for i in range(n):
-  check[i] = int(check[i])
+case = list(map(int, input().split()))
+min_val = case[0]
 
-min_num = check[0]
+# min(case)
+for i in range(len(case)):
+  if min_val > case[i]:
+    min_val = case[i]
 
-for i in range(n):
-  if min_num > check[i]:
-    min_num = check[i]
-print(min_num)
+print(min_val)

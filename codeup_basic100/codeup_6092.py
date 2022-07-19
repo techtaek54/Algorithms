@@ -1,16 +1,18 @@
-x = int(input())
-check = input().split()
+# [Codeup 기초 100제] 6092 - 이상한 출석 번호 부르기1
 
-for i in range(x):
-  check[i] = int(check[i])
+# input
+n = int(input())
+called = list(map(int, input().split()))
 
-# 1~23번까지, 0은 사용 X
-student = []
-for _ in range(24):
-  student.append(0)
+# result 초기화
+result = []
+for i in range(23):
+  result += [0]
 
-for i in range(x):
-  student[check[i]] += 1
+# result의 번호를 체크
+for i in range(len(called)):
+  result[called[i]-1] += 1
 
-for i in range(1,24):
-  print(student[i],end=' ')
+# output
+for i in range(len(result)):
+  print(result[i],end=' ')

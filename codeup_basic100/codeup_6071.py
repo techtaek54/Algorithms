@@ -1,4 +1,7 @@
+# [Codeup 기초 100제] 6071 - 0 입력될 때 까지 무한 출력하기
+
 while True:
-  n = int(input())
-  if n == 0: break
-  print(n)
+  num = int(input())
+  if num == 0:
+    break
+  print(num)

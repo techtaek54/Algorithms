@@ -1,9 +1,10 @@
-a, b, c = list(map(int,input().split()))
-# 최소공배수 구현
+# [Codeup 기초 100제] 6091 - 함께 문제 푸는 날
+
+a, b, c = list(map(int, input().split()))
+
 i = 1
 while True:
   if i % a == 0 and i % b == 0 and i % c == 0:
-    ans = i
+    print(i)
     break
   i += 1
-print(ans)

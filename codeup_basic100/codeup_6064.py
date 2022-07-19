@@ -1,6 +1,7 @@
-a, b, c = map(int,input().split())
+# [Codeup 기초 100제] 6064 - 정수 3개 입력받아 가장 작은 값 출력하기
 
-min = a if a < b else b
-min = min if min < c else c
+a, b, c = list(map(int, input().split()))
+min_val = b if b < a else a
+min_val = c if c < min_val else min_val
 
-print(min)
+print(min_val)

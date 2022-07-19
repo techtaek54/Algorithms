@@ -1,8 +1,7 @@
+# [Codeup 기초 100제] 6093 - 이상한 출석 번호 부르기2
+
 n = int(input())
-call = input().split()
+case = list(map(int, input().split()))
 
-for i in range(n):
-  call[i] = int(call[i])
-
-for i in range(n-1,-1,-1):
-  print(call[i],end=' ')
+for i in range(len(case)):
+    print(case[len(case)-1-i], end=' ')
