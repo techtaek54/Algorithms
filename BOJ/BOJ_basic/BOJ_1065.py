@@ -1,27 +1,21 @@
-# str 으로 풀기
+'''
+* 한수 : 각 자리가 등차수열을 이루는 수
+* I : 자연수 n (n <= 1000)
+* O : 한수의 개수 (<= n)
+'''
 
-num = int(input())
+def hansoo(n):
+    cnt = 0
+    for i in range(1, n + 1):
+        digit_100 = (i // 100) 
+        digit_10 = (i % 100 // 10)
+        digit_1 = (i % 10)
+        if i < 100:
+            cnt += 1
+        elif (digit_100 - digit_10) == (digit_10 - digit_1):
+            cnt += 1
+    return cnt
 
-cnt = 0
-for i in range(1, num + 1):
-    x = str(i)
+n = int(input())
 
-    if i < 100:
-        cnt += 1
-    elif (int(x[1]) - int(x[0])) == (int(x[2]) - int(x[1])):
-        cnt +=1
-
-print(cnt)
-
-# int 로 풀기
-
-num = int(input())
-cnt = 0
-
-for i in range(1, num + 1):
-    if i < 100:
-        cnt += 1
-    elif ((i // 100) - (i % 100 // 10)) == ((i % 100 // 10)) - (i % 10):
-        cnt += 1
-
-print(cnt)
+print(hansoo(n))
