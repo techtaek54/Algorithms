@@ -1,6 +1,15 @@
-a, b, c = list(map(int, input().split()))
+'''
+- a, b, c 입력받아 다양한 나머지 연산 수행
+'''
 
-print((a + b) % c)
-print(((a % c) + (b % c))% c)
-print((a * b) % c)
-print(((a % c) * (b % c)) % c)
+a, b, c = map(int, input().split())
+
+eq1 = (a + b) % c
+eq2 = ((a % c) + (b % c)) % c
+eq3 = (a * b) % c
+eq4 = ((a % c) * (b % c)) % c
+
+print(eq1)
+print(eq2)
+print(eq3)
+print(eq4)
