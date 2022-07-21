@@ -1,16 +1,30 @@
+'''
+* I : 한 줄에 하나씩 정수 n (0 <= n <=1000)
+* O : 42로 나누었을 때, 서로 다른 나머지 갯수
+    * 중복 제거 => set()
+'''
+
 case = []
 for i in range(10):
-    num = int(input())
-    case.append(num % 42)
+    case.append(int(input()) % 42)
 
-# 중복제거를 위한 set() 활용
-rest = len(set(case))
-print(rest)    
+rest_case = set(case)
 
-# set() 없이 중복제거
-rest_list = []
-for val in case:
-    if val in rest_list:
-        continue
-    rest_list.append(val)
-print(len(rest_list))
+print(len(rest_case))
+
+# set() 구현
+set_case = []
+for i in range(len(case)):
+    if case[i] not in set_case:
+        set_case.append(case[i])
+
+# len() 구현
+cnt = 0
+
+for i in set_case:
+    cnt += 1
+
+print(cnt)
+
+
+

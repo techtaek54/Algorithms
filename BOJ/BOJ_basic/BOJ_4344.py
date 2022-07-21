@@ -1,15 +1,21 @@
-c = int(input())
+'''
+* I : test case C / 학생수 n, case -> list
+* O : 평균을 넘는 학생들의 비율
+'''
 
-for i in range(c):
+C = int(input())
+
+for i in range(C):
     case = list(map(int, input().split()))
-
-    avg = sum(case[1:]) / case[0]
+    n = case[0]
+    score = case[1:]
+    avg = sum(score) / n
     cnt = 0
 
-    for score in case[1:]:
-        if score > avg:
+    for s in score:
+        if s > avg:
             cnt += 1
     
-    above_rate = (cnt / case[0]) * 100
-
+    above_rate = cnt / n * 100
+    
     print('{:.3f}%'.format(above_rate))

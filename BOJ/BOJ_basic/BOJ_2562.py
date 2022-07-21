@@ -1,18 +1,29 @@
-case = []
-for i in range(9):
-    n = int(input())
-    case.append(n)
+'''
+* 최댓값
+* I : 한 줄에 하나씩 정수 입력, 9개
+* O : 최댓값, 최댓값 인덱스
 
-print(max(case))
+** 변수 초기화 중요!
+'''
+
+case = []
+
+for i in range(9):
+    num = int(input())
+    case.append(num)
+
+# 함수 사용
+print(max(case)) 
 print(case.index(max(case)) + 1)
 
-# max()를 직접 구현하고, max_index 변수를 만들어 동일한 기능 수행 가능
+# 함수 사용 X, 반복문 사용
 max_val = case[0]
+max_idx = 0  # 초기화 필요!
 
 for i in range(len(case)):
     if max_val < case[i]:
         max_val = case[i]
-        max_index = i + 1
+        max_idx = i
 
 print(max_val)
-print(max_index)
+print(max_idx + 1)

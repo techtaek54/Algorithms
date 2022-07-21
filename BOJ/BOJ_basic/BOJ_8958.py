@@ -1,16 +1,23 @@
-t = int(input())
+'''
+* OX 퀴즈
+* I : test case T / score
+* O : 점수로 환산하여 출력
+'''
 
-for i in range(1, t + 1):
-    case = input()
-    sum = 0
-    score = 0
+T = int(input())
 
-    for j in case:
-        if j == 'X':
-            score = 0
-            sum += score
+for i in range(T):
+    score = input()
+    point = 0
+    result_score = 0
+
+    for j in range(len(score)):
+        
+        if score[j] == 'O':
+            point += 1
         else:
-            score += 1
-            sum += score
-   
-    print(sum)
+            point = 0
+        
+        result_score += point
+        
+    print(result_score)
