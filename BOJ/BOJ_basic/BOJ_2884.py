@@ -1,13 +1,14 @@
-# input : 24시간 표현 사용 => 0:0 ~23:59 
-# 45분 이른 시간 출력
-h, m = map(int, input().split())
+'''
+* 알람 맞추기
+* input : 현재 시간 h1, m1 
+* output : 45분 전 시간 h2, m2 (24시간 표현)
+'''
 
-set_time = (h * 60 + m) - 45
-hour = set_time // 60 % 24
-min = set_time % 60 % 60
+h1, m1 = map(int, input().split())
 
-print(hour, min)
+time = (h1 * 60) + m1 - 45
 
+h2 = time // 60 % 24
+m2 = time % 60 % 60
 
-
-
+print(h2, m2)

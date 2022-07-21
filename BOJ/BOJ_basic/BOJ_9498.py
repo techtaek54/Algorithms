@@ -1,9 +1,20 @@
+'''
+* input : score
+* output : grade
+* 구간별 조건문 작성
+'''
+
 score = int(input())
 
-if 90 <= score <= 100: grade = 'A'
-elif score >= 80: grade = 'B'
-elif score >= 70: grade = 'C'
-elif score >= 60: grade = 'D'
-else: grade = 'F'
-    
+if 90 <= score <= 100:
+    grade = 'A'
+elif 80 <= score:
+    grade = 'B'
+elif 70 <= score:
+    grade = 'C'
+elif 60 <= score:
+    grade = 'D'
+else:
+    grade = 'F'
+
 print(grade)

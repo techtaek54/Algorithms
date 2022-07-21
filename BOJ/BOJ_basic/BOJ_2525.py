@@ -1,8 +1,16 @@
-a, b = map(int, input().split())  # 현재 시각
-c = int(input())  # 소요시간
+'''
+* 오븐 시계
+* input : 현재 시간 h1, m1 / 필요한 시간 plus_time
+* output : 나중 시간 h2, m2 (24시간 표현)
+'''
 
-total_time = (a * 60 + b) + c
-hour = total_time // 60 % 24
-min = total_time % 60 % 60
+h1, m1 = map(int, input().split())
+plus_time = int(input())
 
-print(hour, min)
+time = (h1 * 60) + m1 + plus_time
+
+h2 = time // 60 % 24
+m2 = time % 60 % 60
+
+print(h2, m2)
+

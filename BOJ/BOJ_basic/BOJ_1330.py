@@ -1,5 +1,16 @@
-a, b = list(map(int, input().split()))
+'''
+* input : a, b
+* output : 비교연산자 기호
+* if-elif-else
+'''
 
-if a > b: print('>')
-elif a < b: print('<')
-else: print('==')
+a, b = map(int, input().split())
+
+if a > b:
+    result = '>'
+elif a < b:
+    result = '<'
+else:
+    result = '=='
+
+print(result)
